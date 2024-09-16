@@ -1,4 +1,18 @@
+"use client";
+import { useForm } from "react-hook-form";
+import { DribbbleIcon, GithubIcon, LinkedinIcon, TwitterIcon } from "../Icons";
+import Link from "next/link";
+
 const Footer = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => console.log(data);
+  console.log(errors);
+
   return (
     <footer className="mt-16 rounded-2xl bg-dark m-2 flex flex-col items-center text-light">
       <h3 className="mt-16 font-medium dark:font-bold text-center capitalize text-2xl sm:text-3xl lg:text-4xl px-4">
@@ -9,7 +23,7 @@ const Footer = () => {
         members community to stay up to date with latest news.
       </p>
 
-      {/* <form
+      <form
         onSubmit={handleSubmit(onSubmit)}
         className="mt-6 w-fit sm:min-w-[384px] flex items-stretch bg-light dark:bg-dark p-1 sm:p-2 rounded mx04"
       >
@@ -27,7 +41,7 @@ const Footer = () => {
       </form>
       <div className="flex items-center mt-8">
         <a
-          href={siteMetadata.linkedin}
+          // href={siteMetadata.linkedin}
           className="inline-block w-6 h-6 mr-4"
           aria-label="Reach out to me via LinkedIn"
           target="_blank"
@@ -36,7 +50,7 @@ const Footer = () => {
           <LinkedinIcon className="hover:scale-125 transition-all ease duration-200" />
         </a>
         <a
-          href={siteMetadata.twitter}
+          // href={siteMetadata.twitter}
           className="inline-block w-6 h-6 mr-4"
           aria-label="Reach out to me via Twitter"
           target="_blank"
@@ -45,7 +59,7 @@ const Footer = () => {
           <TwitterIcon className="hover:scale-125 transition-all ease duration-200" />
         </a>
         <a
-          href={siteMetadata.github}
+          // href={siteMetadata.github}
           className="inline-block w-6 h-6 mr-4 fill-light"
           aria-label="Check my profile on Github"
           target="_blank"
@@ -54,7 +68,7 @@ const Footer = () => {
           <GithubIcon className="fill-light dark:fill-dark  hover:scale-125 transition-all ease duration-200" />
         </a>
         <a
-          href={siteMetadata.dribbble}
+          // href={siteMetadata.dribbble}
           className="inline-block w-6 h-6 mr-4"
           aria-label="Check my profile on Dribbble"
           target="_blank"
@@ -84,7 +98,7 @@ const Footer = () => {
             CodeBucks
           </a>
         </div>
-      </div> */}
+      </div>
     </footer>
   );
 };

@@ -75,14 +75,21 @@ const Blog = defineDocumentType(() => ({
   },
 }));
 
-// const codeOptions = {
-//   theme: 'github-dark',
-//   grid: false,
-// }
+const codeOptions = {
+  theme: "github-dark",
+  grid: false,
+};
 
 export default makeSource({
   /* options */
   contentDirPath: "content",
   documentTypes: [Blog],
-  // mdx: { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, {behavior: "append"}], [rehypePrettyCode, codeOptions] ] }
+  mdx: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [
+      rehypeSlug,
+      [rehypeAutolinkHeadings, { behavior: "append" }],
+      [rehypePrettyCode, codeOptions],
+    ],
+  },
 });
