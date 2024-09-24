@@ -1,6 +1,12 @@
-import siteMetadata from "@/project files/siteMetaData";
 import ContactForm from "@/src/components/Contact/ContactForm";
-import LottieAnimation from "@/src/components/Contact/LottieAnimation";
+import siteMetadata from "@/src/utils/siteMetaData";
+import dynamic from "next/dynamic";
+const LottieAnimation = dynamic(
+  () => import("@/src/components/Contact/LottieAnimation"),
+  {
+    ssr: false,
+  }
+);
 
 export const metadata = {
   title: "Contact Me",
