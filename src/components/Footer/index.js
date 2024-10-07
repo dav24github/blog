@@ -91,8 +91,12 @@ const Footer = () => {
         </Link>
         <div className="text-center">
           Made with &hearts; by{" "}
-          <a href="https://devdreaming.com" className="underline" target="_blank">
-            CodeBucks
+          <a
+            href="https://devdreaming.com"
+            className="underline"
+            target="_blank"
+          >
+            CodeBlogs
           </a>
         </div>
       </div>
